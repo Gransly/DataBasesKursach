@@ -6,17 +6,21 @@
         xmlns:local="clr-namespace:DataBasesKursach"
    
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="380
-        " AllowsTransparency="True" Background="Transparent"
-        WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" AllowDrop="True">
+        Title="Login" Height="450" Width="380" 
+        AllowsTransparency="True" Background="Transparent"
+        WindowStyle="None" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" AllowDrop="True"
+        MouseDown="Window_MouseDown">
     <Grid>
         <Grid>
             <Grid.RowDefinitions>
+                <RowDefinition Height ="60"/>
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
-            <Border CornerRadius="10" Grid.RowSpan="2">
+            <Border CornerRadius="10" Grid.RowSpan="3">
+
+
                 <Border.Background>
                     <LinearGradientBrush>
                         <GradientStop Color="#7be9f6" Offset="0.0"/>
@@ -25,33 +29,44 @@
                 </Border.Background>
             </Border>
 
-            <StackPanel VerticalAlignment="Center">
-                <Image Source="Images/cruise-ship-512.png" Width="80"/>
+            <StackPanel Grid.Row="0">
+                <Button Width="30" Height="30" Margin="340,5,0,0" Background="Transparent" Foreground ="Transparent" BorderBrush="Transparent" BorderThickness="0" Click="Button_Click_1">
+                    
+                </Button>
+            </StackPanel>
+            
+            <StackPanel Grid.Row="1" Height="218">
+         
                 <TextBlock Text="Baltica inc."
                            FontWeight="Light"
                            FontFamily="helvetica"
-                           FontSize="22"
+                           FontSize="40"
                            Foreground="White"
-                           HorizontalAlignment="Center"/>
+                           HorizontalAlignment="Center" Height="42" Margin="0,50,0,0"/>
             </StackPanel>
 
 
-            <StackPanel Grid.Row="1">
+            <StackPanel Grid.Row="2">
                 <StackPanel  Orientation="Horizontal">
-                    <TextBox x:Name="userBox" FontFamily="helveticac"
-                         FontWeight="Light"
-                         Text="Username"
-                         FontSize="20"
-                         HorizontalAlignment="Center"
-                         Foreground="White"
-                         Background="Transparent"
-                         BorderThickness="0"
-                         Width="235"
-                         HorizontalContentAlignment="Left"
-                         Opacity="0.5"
-                         Height="25"
-                             Margin="63,0,0,0"/>
-                    
+                    <TextBox x:Name="userBox" 
+                             FontFamily="helvetica"
+                             FontWeight="Light"
+                             Text="User"
+                             FontSize="20"
+                             HorizontalAlignment="Center"
+                             Foreground="White"
+                             Background="Transparent"
+                             BorderThickness="0"
+                             Width="235"
+                             HorizontalContentAlignment="Left"
+                             Opacity="0.5"
+                             Height="25"
+                             Margin="63,0,0,0"
+                             GotFocus="userBox_GotFocus"
+                             >
+
+                    </TextBox>
+
                 </StackPanel>
                 <Border Width="250"
                     Height="2"
@@ -60,7 +75,7 @@
 
 
                 <StackPanel  Orientation="Horizontal" Margin="0,10,0,0">
-                    <PasswordBox x:Name="pasBox" FontFamily="helveticac"
+                    <PasswordBox x:Name="pasBox" FontFamily="helvetica"
                          FontWeight="Light"
                          Password="Password"
                          FontSize="20"
@@ -72,7 +87,8 @@
                          HorizontalContentAlignment="Left"
                          Opacity="0.5"
                          Height="25"
-                             Margin="63,0,0,0"/>
+                             Margin="63,0,0,0"
+                                 GotFocus="pasBox_GotFocus"/>
 
                 </StackPanel>
                 <Border Width="250"
@@ -84,8 +100,8 @@
                     <Button Width="100" Height="40" Content="LOGIN" Click="Button_Click"/>
                 </StackPanel>
             </StackPanel>
-            
-                
+
+
         </Grid>
     </Grid>
 </Window>
