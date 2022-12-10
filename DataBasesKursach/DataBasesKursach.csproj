@@ -10,7 +10,7 @@
     <PackageReference Include="MahApps.Metro.IconPacks.Material" Version="2.3.0" />
     <PackageReference Include="MaterialDesignThemes" Version="3.1.1-ci1300" />
     <PackageReference Include="MySql.Data" Version="8.0.19" />
-    <PackageReference Include="System.Data.SqlClient" Version="4.8.1" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
   </ItemGroup>
 
   <ItemGroup>
